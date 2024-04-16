@@ -52,11 +52,11 @@ RUN pip3 install cstruct && \
     rm -rf /tmp/jefferson
 
 # Install ubi_reader to extract UBIFS file systems
-RUN git clone https://github.com/jrspruitt/ubi_reader /tmp/ubi_reader && \
-    cd /tmp/ubi_reader && \
-    python3 setup.py install && \
-    cd / && \
-    rm -rf /tmp/ubi_reader
+#RUN git clone https://github.com/jrspruitt/ubi_reader /tmp/ubi_reader && \
+#    cd /tmp/ubi_reader && \
+#    python3 setup.py install && \
+#    cd / && \
+#    rm -rf /tmp/ubi_reader
 
 # Install yaffshiv to extract YAFFS file systems
 RUN git clone https://github.com/devttys0/yaffshiv /tmp/yaffshiv && \
