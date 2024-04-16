@@ -10,25 +10,27 @@ https://github.com/ReFirmLabs/binwalk
 https://github.com/ReFirmLabs/binwalk/blob/master/INSTALL.md
 
 
+
+
 ## Docker Hub
 
-This repo is automatically built by Docker Hub.
+The original repo is automatically built by Docker Hub.
 
 https://hub.docker.com/repository/docker/sheabot/binwalk
 
+
+## Buiild command
+To build the dockerfile with podman
+
+podman build -T binwalk .
 
 ## Run
 
 These commands mount the current working directory as a volume into the container at `/workspace` which is the $WORKDIR in the container. This allows binwalk to operate on files in the current directory.
 
+Podman
 ```
-docker run -it --rm -v "$(pwd):/workspace" -w /workspace sheabot/binwalk arg1 arg2 ...
-```
-
-Example:
-
-```
-docker run -it --rm -v "$(pwd):/workspace" -w /workspace sheabot/binwalk -e firmware.bin
+docker run -it --rm -v "$(pwd):/workspace" -w /workspace binwalk /bin/bash
 ```
 
 
