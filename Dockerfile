@@ -66,11 +66,11 @@ RUN git clone https://github.com/devttys0/yaffshiv /tmp/yaffshiv && \
     rm -rf /tmp/yaffshiv
 
 # Install unstuff (closed source) to extract StuffIt archive files
-RUN mkdir -p /tmp/unstuff && \
-    cd /tmp/unstuff && \
-    wget -O - https://downloads.tuxfamily.org/sdtraces/stuffit520.611linux-i386.tar.gz | tar -zxv && \
-    install -m 0755 bin/unstuff /usr/local/bin/ && \
-    rm -rf /tmp/unstuff
+#RUN mkdir -p /tmp/unstuff && \
+#    cd /tmp/unstuff && \
+#    wget -O - https://downloads.tuxfamily.org/sdtraces/stuffit520.611linux-i386.tar.gz | tar -zxv && \
+#    install -m 0755 bin/unstuff /usr/local/bin/ && \
+#    rm -rf /tmp/unstuff
 
 # Workspace volume from host
 VOLUME [ "/workspace" ]
