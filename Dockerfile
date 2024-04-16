@@ -77,5 +77,5 @@ VOLUME [ "/workspace" ]
 WORKDIR /workspace
 
 # Call binwalk executable with arguments
-ENTRYPOINT [ "binwalk" ]
-CMD [ "-h" ]
+# ENTRYPOINT [ "binwalk" ]
+CMD [ "binwalk -h" ]
